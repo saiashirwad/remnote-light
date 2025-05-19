@@ -1,83 +1,281 @@
+/* Solarized Light Theme for RemNote */
+/* Author: Your Name */
+
 :root {
-  --bg-primary: #1f1f1f;
-  --bg-light-accent: #ff9800;
+  /* Backgrounds */
+  --rn-clr-background-primary: #fdf6e3;
+  --rn-clr-background-secondary: #eee8d5;
+  --rn-clr-background-tertiary: #93a1a1;
+  --rn-clr-background-accent: #b58900;
+  --rn-clr-background-light-accent: #eee8d5;
+  --rn-clr-background-elevation-5: #fdf6e3;
+  --rn-clr-background-elevation-10: #eee8d5;
+  --rn-clr-background-elevation-20: #eee8d5;
+  --rn-clr-background-elevation-30: #eee8d5;
+  --rn-clr-background-overlay-dark: rgba(0, 43, 54, 0.7);
+  --rn-clr-background-overlay-light: rgba(253, 246, 227, 0.7);
+  --rn-clr-background-positive: #859900;
+  --rn-clr-background-warning: #b58900;
+  --rn-clr-background-negative: #dc322f;
+  --rn-clr-background-state-disabled: #93a1a1;
+  --rn-clr-background-inverse-primary: #002b36;
+  --rn-clr-background-inverse-secondary: #073642;
+
+  /* Content (Text) */
+  --rn-clr-content-primary: #657b83;
+  --rn-clr-content-secondary: #586e75;
+  --rn-clr-content-tertiary: #839496;
+  --rn-clr-content-accent: #268bd2;
+  --rn-clr-content-on-color: #fdf6e3;
+  --rn-clr-content-inverse-primary: #fdf6e3;
+  --rn-clr-content-inverse-secondary: #eee8d5;
+  --rn-clr-content-inverse-tertiary: #93a1a1;
+  --rn-clr-content-positive: #859900;
+  --rn-clr-content-warning: #b58900;
+  --rn-clr-content-negative: #dc322f;
+  --rn-clr-content-logo-color: #268bd2;
+
+  /* Borders */
+  --rn-clr-border-selected: #268bd2;
+  --rn-clr-border-opaque: #93a1a1;
+  --rn-clr-border-light-accent: #eee8d5;
+  --rn-clr-border-accent: #b58900;
+  --rn-clr-border-accent-light: #b58900;
+  --rn-clr-border-warning: #cb4b16;
+  --rn-clr-border-positive: #859900;
+  --rn-clr-border-negative: #dc322f;
+  --rn-clr-border-state-disabled: #93a1a1;
+  --rn-clr-border-inverse-opaque: #073642;
+  --rn-clr-border-inverse-selected: #268bd2;
+
+  /* Shadows */
+  --rn-clr-shadow-default: 0 1px 4px 0 rgba(131, 148, 150, 0.08);
+  --rn-clr-shadow-card: 0 2px 8px 0 rgba(131, 148, 150, 0.10);
+  --rn-clr-shadow-menu: 0 4px 16px 0 rgba(131, 148, 150, 0.12);
+  --rn-clr-shadow-modal: 0 8px 32px 0 rgba(131, 148, 150, 0.16);
+
+  /* Font */
+  --rn-font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
 }
 
-#search-results__result.rn-clr-background--hovered {
-  background: var(--rn-clr-background-secondary);
-}
-
-#search-results__result div[label="Search All Notes"] {
-  margin-right: 12px;
-}
-
-div[data-cy="omnibar"][data-omnibar-type="command"]
-  div[data-text-type="label"] {
-  margin-left: 8px !important;
-  padding-top: 4px !important;
-  padding-bottom: 8px !important;
-}
-
-.rn-clr-border-opaque {
-  border-color: #444 !important;
-}
-
-.remnote-tooltip-container,
-.table-background-overlay,
-.rn-clr-background-primary {
-  background: var(--bg-primary) !important;
-}
-
-[data-plugin-id="demo-tabs"] .h-\[50px\] {
-  height: 32px !important;
-  font-size: 14px;
-}
-
-div[data-plugin-id="demo-tabs"] .h-\[50px\].rn-clr-background-secondary {
-  background-color: #000;
-}
-
-div[data-plugin-id="demo-tabs"] input {
-  background-color: transparent !important;
-}
-
-div[data-cy="tag-configure-options"] > div {
-  padding: 24px 32px;
-}
-
-.rn-floating-toolbar,
-.rn-popup.popup-menu > .rn-popup__content,
-div[data-cy="selected-text-menu"],
-div[data-cy="tag-configure-options"] > div,
-div[data-omnibar-results="true"],
-div[data-plugin-id="demo-tabs"] .h-\[50px\].rn-clr-background-primary,
-.rich-text-editor__search-results div[data-search-result="search-result-panel"],
-#search-results__no-results,
+/* General App Background */
+body,
+.rn-all-notes11,
+.rn-editor22,
+.rn-pane4,
 .rn-sidebar,
-div[data-cy="omnibar"] {
-  background: #1a1a1a !important;
+.rn-settings18,
+.rn-plugin-sidebar,
+.rn-plugin-list,
+.rn-plugin,
+.rn-card3,
+.rn-doc-header7,
+.rn-queue10,
+.rn-queue-container,
+.rn-doc-menu,
+.rn-menu,
+.rn-dialog,
+.rn-popup2,
+.rn-toast1,
+.rn-toast-container {
+  background: var(--rn-clr-background-primary) !important;
+  color: var(--rn-clr-content-primary) !important;
+  font-family: var(--rn-font-family);
 }
 
-.workInProgressRemEmpty .linear-editor-item:after {
-  color: #e0e0e0 !important;
-  filter: brightness(0.6);
+/* Document Title */
+.rn-doc-title {
+  color: var(--rn-clr-content-accent) !important;
+  font-weight: 600;
 }
 
-.rn-work-in-progress-rem {
-  background: #2a2a2a !important;
-  color: #e0e0e0 !important;
+/* Rem Bullets */
+.rn-rem-bullet,
+.rn-rem-icon-bullet1 {
+  color: var(--rn-clr-content-accent) !important;
+  background: transparent !important;
 }
 
-#hierarchy-editor .tree-node--automatic-search-portal-header,
-div[data-plugin-id="demo-tabs"] > div > div.rn-clr-background-secondary,
-div[data-plugin-id="demo-tabs"]
-  div.smooth-dnd-container
-  .rn-clr-background-secondary,
-div[data-plugin-id="demo-tabs"]
-  div.smooth-dnd-container
-  div.rn-clr-background-secondary,
-div[data-plugin-id="demo-tabs"] > div,
-.rn-pane__top-bar,
-.rn-pane__body {
-  background: #1f1f1f !important;
+/* Tags */
+.rn-tag3,
+.rn-tag-container {
+  background: var(--rn-clr-background-light-accent) !important;
+  color: var(--rn-clr-content-accent) !important;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-weight: 500;
+}
+
+/* References */
+.rn-rem-reference {
+  color: var(--rn-clr-content-accent) !important;
+  background: #e1ecf4 !important;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+/* Links */
+a,
+.rn-doc-title a,
+.rn-rem-reference a {
+  color: var(--rn-clr-content-accent) !important;
+  text-decoration: underline;
+}
+
+/* Accent Buttons */
+.rn-button,
+.rn-add-rem-button,
+.rn-add-document-button,
+.rn-study-deck-btn {
+  background: var(--rn-clr-background-accent) !important;
+  color: var(--rn-clr-content-on-color) !important;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.rn-button:hover,
+.rn-add-rem-button:hover,
+.rn-add-document-button:hover,
+.rn-study-deck-btn:hover {
+  background: var(--rn-clr-content-accent) !important;
+}
+
+/* Cards */
+.rn-card3,
+.rn-document,
+.rn-document-wrapper {
+  background: var(--rn-clr-background-secondary) !important;
+  border: 1px solid var(--rn-clr-border-opaque) !important;
+  border-radius: 8px;
+  box-shadow: var(--rn-clr-shadow-card);
+}
+
+/* Editor Text */
+.rn-text,
+.rn-text-paragraph-base,
+.rn-text-paragraph-medium,
+.rn-text-paragraph-large,
+.rn-text-label-base,
+.rn-text-label-medium,
+.rn-text-label-large {
+  color: var(--rn-clr-content-primary) !important;
+}
+
+/* Headings */
+.rn-text-heading-xsmall,
+.rn-text-heading-small,
+.rn-text-heading-medium,
+.rn-text-heading-large {
+  color: var(--rn-clr-content-secondary) !important;
+  font-weight: 700;
+}
+
+/* Quotes */
+.rn-quote,
+.rn-quote-inner,
+.rn-quote-content {
+  background: #f5eecb !important;
+  color: #657b83 !important;
+  border-left: 4px solid #b58900 !important;
+  padding-left: 12px;
+  margin: 8px 0;
+}
+
+/* Code Blocks */
+.rn-code-node3,
+pre,
+code {
+  background: #eee8d5 !important;
+  color: #586e75 !important;
+  border-radius: 4px;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  padding: 2px 6px;
+}
+
+/* Tables */
+.rn-table-header,
+.rn-table-row {
+  background: var(--rn-clr-background-secondary) !important;
+  color: var(--rn-clr-content-primary) !important;
+  border-bottom: 1px solid var(--rn-clr-border-opaque) !important;
+}
+.rn-table-header {
+  background: #e1ecf4 !important;
+  color: #268bd2 !important;
+  font-weight: 600;
+}
+
+/* Flashcard Delimiters */
+.rn-flashcard-delimiter {
+  color: #b58900 !important;
+  font-weight: 700;
+}
+
+/* Positive/Negative/Warning */
+.rn-content-positive,
+.rn-background-positive {
+  color: #859900 !important;
+  background: #f0f8e3 !important;
+}
+.rn-content-warning,
+.rn-background-warning {
+  color: #b58900 !important;
+  background: #fffbe3 !important;
+}
+.rn-content-negative,
+.rn-background-negative {
+  color: #dc322f !important;
+  background: #ffeaea !important;
+}
+
+/* Selection and Focus */
+::selection {
+  background: #b58900;
+  color: #fdf6e3;
+}
+input:focus,
+textarea:focus,
+.rn-editor22:focus-within {
+  outline: 2px solid #268bd2 !important;
+  background: #e1ecf4 !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #eee8d5;
+}
+::-webkit-scrollbar-thumb {
+  background: #93a1a1;
+  border-radius: 4px;
+}
+
+/* Disabled State */
+.rn-content-state-disabled,
+.rn-background-state-disabled {
+  color: #93a1a1 !important;
+  background: #f5f5f5 !important;
+}
+
+/* Miscellaneous */
+.rn-divider,
+hr {
+  border-color: #93a1a1 !important;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  body,
+  .rn-all-notes11,
+  .rn-editor22,
+  .rn-pane4,
+  .rn-sidebar {
+    background: #fdf6e3 !important;
+  }
+}
+
+/* Dark mode override: fallback to default */
+.dark {
+  /* Optionally, you can invert or fallback to RemNote's default dark mode */
 }
