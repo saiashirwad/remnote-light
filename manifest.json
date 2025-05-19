@@ -1,17 +1,17 @@
 {
   "manifestVersion": 1,
-  "id": "minimal-dark",
-  "name": "Min Dark",
-  "description": "An adaptation of the VSCode Min Theme for RemNote",
-  "author": "Arnav Gosain",
-  "repoUrl": "https://github.com/arn4v/remnote-min-dark",
+  "id": "solarized-light",
+  "name": "Solarized Light",
+  "description": "Solarized Light theme for Remnote",
+  "author": "Sai Ashirwad",
+  "repoUrl": "https://github.com/saiashirwad/remnote-light",
   "version": {
     "major": 1,
     "minor": 3,
     "patch": 0
   },
   "enableOnMobile": true,
-  "theme": ["dark"],
+  "theme": ["light"],
   "requestNative": false,
   "requiredScopes": []
 }
